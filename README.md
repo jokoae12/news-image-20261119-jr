@@ -15,7 +15,10 @@ sell-off as AI valuations wobbled. A briefs row adds COP31 dropping fossil
 fuels in Antalya, the Iran war's ninth month in Hormuz, the third Ukrainian
 strike on the Crimea Bridge, Kenya's last Ebola patient going home, Gaza's
 Yellow Line crossing, BepiColombo reaching Mercury, a migrant boat lost off
-Senegal and North Korea's expanding uranium enrichment. The program draws
+Senegal and North Korea's expanding uranium enrichment, and a closing
+ticker adds Bukele's third-term registration in El Salvador, the
+US-Venezuela military cooperation deal and the IMF's warning that global
+debt will near 100% of GDP — fifteen stories in all. The program draws
 every letter with its own bitmap font and every picture with plain
 geometry, so it needs no assets, no network and no clock, and two runs
 write exactly the same bytes.

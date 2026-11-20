@@ -220,8 +220,8 @@ function drawScales(x: number, y: number): void {
   line(x + 4, y + 8, x + 76, y + 8, 4, INK);
   line(x + 10, y + 8, x + 2, y + 30, 2, INK); line(x + 10, y + 8, x + 18, y + 30, 2, INK);
   line(x + 70, y + 8, x + 62, y + 30, 2, INK); line(x + 70, y + 8, x + 78, y + 30, 2, INK);
-  for (let xx = 0; xx < 22; xx++) fillRect(x - 1 + xx, y + 30 + Math.round(Math.abs(xx - 10) * 0.4), 2, 3, GOLD);
-  for (let xx = 0; xx < 22; xx++) fillRect(x + 59 + xx, y + 30 + Math.round(Math.abs(xx - 10) * 0.4), 2, 3, GOLD);
+  fillRect(x - 1, y + 32, 22, 4, GOLD);
+  fillRect(x + 59, y + 32, 22, 4, GOLD);
   fillRect(x + 22, y + 74, 36, 5, INK); disc(x + 40, y - 2, 5, GOLD);
 }
 // Tower with a missile streak.
@@ -297,21 +297,23 @@ for (const p of panels) {
 drawText("AROUND THE WORLD IN BRIEF", 24, 772, 3, INK);
 fillRect(24, 800, 976, 4, RED);
 const briefs: [string, string][] = [
-  ["ANTALYA - CLIMATE", "COP31 DRAFT DROPS FOSSIL FUEL PHASE-OUT CALL"],
-  ["HORMUZ - WAR", "IRAN WAR MONTH NINE: TANKERS ATTACKED IN HORMUZ"],
-  ["CRIMEA - WAR", "THIRD UKRAINIAN STRIKE THIS WEEK HITS CRIMEA BRIDGE"],
-  ["KENYA - HEALTH", "LAST EBOLA PATIENT GOES HOME AFTER 37 DAYS"],
+  ["ANTALYA - CLIMATE", "COP31 DROPS FOSSIL FUEL PHASE-OUT"],
+  ["HORMUZ - WAR", "IRAN WAR MONTH NINE: TANKERS ATTACKED"],
+  ["CRIMEA - WAR", "3RD UKRAINE STRIKE HITS THE BRIDGE"],
+  ["KENYA - HEALTH", "LAST EBOLA PATIENT HOME IN 37 DAYS"],
   ["GAZA - TRUCE", "ISRAELI TROOPS CROSS GAZA YELLOW LINE"],
-  ["SPACE - SCIENCE", "BEPICOLOMBO REACHES MERCURY AFTER 8 YEARS"],
-  ["SENEGAL - MIGRATION", "DOZENS MISSING AS MIGRANT BOAT CAPSIZES"],
-  ["N. KOREA - NUCLEAR", "IAEA: NORTH KOREA EXPANDS URANIUM ENRICHMENT"],
+  ["SPACE - SCIENCE", "BEPICOLOMBO REACHES MERCURY"],
+  ["SENEGAL - MIGRATION", "DOZENS LOST AS MIGRANT BOAT SINKS"],
+  ["N. KOREA - NUCLEAR", "IAEA: N. KOREA EXPANDS ENRICHMENT"],
 ];
 briefs.forEach(([label, head], i) => {
   const col = i % 4, row = Math.floor(i / 4);
-  const bx = 24 + col * 250, by = 814 + row * 80;
+  const bx = 24 + col * 250, by = 814 + row * 64;
   drawText(label, bx, by, 2, RED);
   drawWrapped(head, bx, by + 22, 2, INK, 238, 4);
 });
+drawText("ALSO TODAY:", 24, 950, 2, RED);
+drawText("BUKELE SEEKS 3RD TERM - US-VENEZUELA DEAL - IMF DEBT WARNING", 168, 950, 2, INK);
 
 // Footer
 fillRect(0, 976, W, 48, INK);
